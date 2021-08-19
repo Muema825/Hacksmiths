@@ -1,0 +1,19 @@
+body{
+margin-top: 300px;
+margin-right: 300px;
+margin-bottom: 300px;
+margin-left: 300px;
+border-color:black ;
+background-color: #c4c4c4;
+text-align: center;
+}
+.form-sec{
+    margin:10px,10px,10px,10px;
+    background-color:#c4c4c4;
+    border-style: groove;
+    border-color: black;
+}
+.form-sec.input{
+    background-color: azure;
+    border-style: ridge;
+}
