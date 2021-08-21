@@ -1,0 +1,252 @@
+@import url('https: //fonts.googleapis.com/css2?family=Poppins: weight@200;300;400;500;600;700;800;900&display=swwap');
+
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+.contact{
+	position: relative;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(city.jpg);
+	background-size: cover;
+
+}
+.contact .content
+{
+	max-width: 70px;
+	text-align: center;
+}
+.contact .content h2
+{
+	font-size: 75px;
+	font-weight: 550;
+	color: black;
+
+}
+.contact .content p
+{
+	font-weight: 900;
+	color: #fff;
+}
+.container1
+{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+
+}
+.container1 .contactInfo
+{
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+.container1 .contactInfo .box
+{
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+}
+.container1 .contactInfo .box .icon{
+	min-width: 60px;
+	height: 60px;
+	background: #fff;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	border-radius: 50%;
+	font-size: 22px;
+}
+.container1 .contactInfo .box .text{
+	display: flex;
+	margin-left: 20px;
+	font-size: 16px;
+	color: #fff;
+	flex-direction: column;
+	font-weight: 300;
+
+
+}
+.container1 .contactInfo .box .text h3
+{
+	font-weight: 500;
+	color: #000000;
+}
+
+.container{
+	
+	width: 80%;
+	margin: 50px auto;
+}
+img{
+	max-width: 100%;
+}
+.image{
+	flex-basis: 40%;
+
+}
+.text{
+	font-size: 30px;
+	padding-right: 20px;
+	text-end;
+	font-style: italic;
+	text-align: center;
+}
+.mystyle{
+	font-size: 20px;
+}
+.background-attachment: 100;{
+	background-image: "castle.jpg";
+}
+.text2{
+	font-size: 14px;
+	padding-right: 40px;
+	font-style: normal;
+	word-spacing: 10px;
+	color: white;
+
+}
+.contact-box{
+	background: #fff;
+	display: flex;
+}
+.contact-left{
+	flex-basis: 60%;
+	padding: 40px 60px;
+}
+.contact-right{
+	flex-basis: 60%;
+	padding: 135px;
+	background: #1E90FF;
+	color: #fff;
+}
+h1{
+	margin-bottom: 10px;
+}
+.container p{
+	margin-bottom: 40px;
+}
+body{
+	font-size: 14px;
+	font-family: 'Poppins', sans-serif;
+}
+label {
+	color: #1c00b5;
+}
+button{
+	background: #1E90FF;
+	width: 100px;
+	border: none;
+	outline: none;
+	color: #fff;
+	height: 35px;
+	border-radius: 30px;
+	margin-top: 20px;
+	box-shadow: 0px 5px 15px 0px rgba(28, 0, 181, 0.3);
+}
+.contact-left h3{
+	color: #1c00b5;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+.contact-right h3{
+	color: white;
+	font-weight: 600;
+	margin-bottom: 30px;
+}
+.contactForm
+{
+	width: 500px;
+	padding: 40px;
+	background: #fff;
+}
+.contactForm h2
+{
+	font-size: 30px;
+	color: #333;
+	font-weight: 500;
+}
+.contactForm .inputBox
+{
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+	width: 100%;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	border: none;
+	border-bottom: 2px solid #333;
+	outline: none;
+	resize: none;
+
+
+}
+.contactForm .inputBox span{
+	position: absolute;
+	left: 0;
+	padding: 5px 0;
+	font-size: 16px;
+	margin: 10px 0;
+	pointer-events: none;
+	transition: 0.5s;
+	color: #666;
+
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+	color: #e91e63;
+	font-size: 12px;
+	transform: translateY(-20px);
+
+}
+.contactForm .inputBox input[type="submit"]
+{
+	width: 100px;
+	background: #00bcd4;
+	color: #fff;
+	border: none;
+	cursor: pointer;
+	padding: 10px;
+	font-size: 13px;
+
+
+}
+@media(max-width: 991px)
+{
+	.conact
+	{
+		padding: 50px;
+	}
+	.container
+	{
+		flex-direction: column;
+	}
+	.container .contactInfo
+	{
+		margin-bottom: 40px;
+	}
+	.container .contactInfo
+	.contactForm
+	{
+		width: 100%;
+	}
+
+}
