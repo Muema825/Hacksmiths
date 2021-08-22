@@ -1,0 +1,151 @@
+Content
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Author Form</title>
+	<link rel="stylesheet" type="text/css" href="Author.css">
+</head>
+<body>
+
+<form action="Author2.php" method="POST" enctype="multipart/form-data">
+		
+<label> Enter Title: </label><br>		
+<input type="text" placeholder="Title"name="post_title"></br>
+			
+<label> Enter Content: </label><br>		
+<textarea name='post_content'placeholder="post_content"></textarea></br>
+	
+<input type="file"name="post_image" id="post_image"></br>
+
+
+<button type="submit" name="submit">Upload</button></br>				
+</form>
+
+</body>
+</html>
+
+
+  <?php
+
+  $servername='localhost';
+  $serveruser='root';
+  $serverpassword='';
+  $database='trial_1';
+
+  $conn=mysqli_connect($servername,$serveruser,$serverpassword,$database);
+
+
+  if(isset($_POST['submit']))
+  {
+            $file=$_FILES['post_image'];
+
+            $fileName=$_FILES['post_image']['name'];
+            $fileType=$_FILES['post_image']['type'];
+            
+           
+            $file =($_FILES["post_image"]['name']);
+            $post_title = $_POST['post_title'];
+            $post_content = $_POST['post_content'];
+           
+            
+
+          $query = "INSERT into content(post_title,post_content,post_image) VALUES ('$post_title','$post_content','$file')";
+          $run=mysqli_query($conn,$query) or die(mysql_error());
+
+                   if($run){
+                    echo"Form Submitted successfully";
+                   }
+                   else{
+                    echo"Form not submitted";
+                   }
+
+          
+         
+
+
+
+  }
+
+  ?>
+
+
+Updating
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title>
+	Edit 
+</title>
+	<link rel="stylesheet" type="text/css" href="Author.css">
+</head>
+<body>
+
+<form action="Editing_Details.php" method="POST">
+
+<input type="text" name="user_id" placeholder="Enter ID"/></br></br>
+
+<input type="text" placeholder="Enter Surname"name="surname"required></br></br>
+
+<input type="text" placeholder="Enter FirstName" name="firstname"required></br></br>
+
+<input type="text" placeholder="OtherName" name="othername" required></br></br>
+
+<input type="email" placeholder="Enter Email" name="email" required></br></br>
+
+<input type="password" placeholder=" Enter Password" name="password" required></br></br>
+		
+<input type="file"name="profile_pic" id="profile_pic"></br>
+
+
+
+<input type="submit" name="Update" value="Update">
+			
+</form>
+
+
+</body>
+
+</html>
+<?php
+
+$servername='localhost';
+$serveruser='root';
+$serverpassword='';
+$database='trial_1';
+
+$conn=mysqli_connect($servername,$serveruser,$serverpassword,$database);
+
+if(isset($_POST['Update']))
+  {
+      $user_id=$_POST['user_id'];
+      $surname=$_POST['othername'];
+      $firstname=$_POST['firstname'];
+      $othername=$_POST['othername'];
+      $email=$_POST['email'];
+      $password=$_POST['password'];
+      
+      $profile_pic=$_POST['profile_pic'];
+
+   $query ="UPDATE edit SET surname='$_POST[surname]',firstname='$_POST[firstname]',othername ='$_POST[othername]',email='$_POST[email]',password='$_POST[password]' where user_id ='$_POST[user_id]'";
+    
+    $run=mysqli_query($conn,$query);
+
+      if($run) 
+      {
+        
+         echo'<script type"text/javascript"> alert (" Data Updated") </script>';
+
+      }
+      else
+      {
+        echo'<script type"text/javascript"> alert(" Data Not Updated") </script>';
+
+      }
+}
+  
+
+?>
+
